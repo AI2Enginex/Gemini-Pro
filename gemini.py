@@ -10,7 +10,7 @@ from langchain.vectorstores import FAISS  # Importing FAISS class from langchain
 from langchain.prompts import PromptTemplate  # Importing PromptTemplate class from langchain module for prompts
 
 # Setting the API key for Google Generative AI service by assigning it to the environment variable 'GOOGLE_API_KEY'
-api_key = os.environ['GOOGLE_API_KEY'] = 'xx-xxxxx'
+api_key = os.environ['GOOGLE_API_KEY'] = 'AIzaSyDaBLM8TjUihg_SaFO3qc3Lms7ZhY-4dJQ'
 
 # Configuring Google Generative AI module with the provided API key
 genai.configure(api_key=api_key)
@@ -79,6 +79,19 @@ class ReadFile:
                 for page_num in range(len(reader.pages)):
                     text += reader.pages[page_num].extract_text()
                 return text
+        except Exception as e:
+            return e
+        
+    def read_file_and_store_elements(filename):
+        try:
+            text = ''
+            with open(filename, "r") as file:
+                for line in file:
+                    # Remove leading/trailing whitespace and newline characters
+                    line = line.strip()
+                    # Add the line to the list of elements
+                    text += line
+            return text
         except Exception as e:
             return e
 
