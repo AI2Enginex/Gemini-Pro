@@ -10,7 +10,7 @@ from langchain.vectorstores import FAISS  # Importing FAISS class from langchain
 from langchain.prompts import PromptTemplate  # Importing PromptTemplate class from langchain module for prompts
 
 # Setting the API key for Google Generative AI service by assigning it to the environment variable 'GOOGLE_API_KEY'
-api_key = os.environ['GOOGLE_API_KEY'] = 'AIzaSyDaBLM8TjUihg_SaFO3qc3Lms7ZhY-4dJQ'
+api_key = os.environ['GOOGLE_API_KEY'] = 'xxxxxxxxxxx'
 
 # Configuring Google Generative AI module with the provided API key
 genai.configure(api_key=api_key)
