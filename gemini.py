@@ -230,7 +230,7 @@ class DocumentQuestionAnswering(ChatGoogleGENAI):
     def conversational_chains(self, chaintype):
         try:
             # Defining a prompt template for conversational question-answering
-            # the "context" variable provides the background or content from which the summary is derived (ex. the pdf document)
+            # the "context" variable provides the background or content from which the data is derived (ex. the pdf document)
             # the "question" variable prompts the user to focus on specific aspects or details within that context
             prompt_template = """
             Answer the question as detailed as possible from the provided context.
